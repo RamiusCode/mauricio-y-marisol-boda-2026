@@ -1,0 +1,604 @@
+---
+// CodigoVestimenta.astro
+---
+
+<section class="relative w-full py-4 px-6 overflow-hidden">
+    <!-- Partículas flotantes de fondo -->
+    <div class="absolute inset-0 pointer-events-none overflow-hidden">
+        <div
+            class="particula-dorada"
+            style="left: 10%; top: 20%; animation-delay: 0s;"
+        >
+        </div>
+        <div
+            class="particula-dorada"
+            style="left: 85%; top: 30%; animation-delay: 1.5s;"
+        >
+        </div>
+        <div
+            class="particula-dorada"
+            style="left: 15%; top: 70%; animation-delay: 3s;"
+        >
+        </div>
+        <div
+            class="particula-dorada"
+            style="left: 90%; top: 65%; animation-delay: 2s;"
+        >
+        </div>
+    </div>
+
+    <div
+        class="max-w-sm lg:max-w-3xl mx-auto relative z-10"
+        id="contenedor-vestimenta"
+    >
+        <!-- MARCO PRINCIPAL CON EFECTO GLASSMORPHISM -->
+        <div
+            class="backdrop-blur-sm rounded-3xl border-2 border-[#0F3D2E]/25 p-8 shadow-sm relative overflow-hidden"
+        >
+            <!-- Brillo sutil animado en la esquina -->
+            <div
+                class="absolute -top-20 -right-20 w-40 h-40 bg-gradient-to-br from-[#0F3D2E]/10 to-transparent rounded-full blur-3xl animate-pulse-slow"
+            >
+            </div>
+            <div
+                class="absolute -bottom-20 -left-20 w-40 h-40 bg-gradient-to-tr from-[#0F3D2E]/8 to-transparent rounded-full blur-3xl animate-pulse-slow"
+                style="animation-delay: 1s;"
+            >
+            </div>
+
+            <!-- CONTENIDO -->
+            <div class="text-center relative" id="tarjeta-vestimenta">
+                <!-- Icono de vestimenta -->
+                <div class="flex justify-center mb-6">
+                    <div class="w-16 h-16 relative vestimenta-icon-container">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-[#9C7A2E]/20 to-[#9C7A2E]/5 rounded-full blur-xl animate-pulse-slow"
+                        >
+                        </div>
+                        <img
+                            src="/iconos/vestido-de-novia.png"
+                            alt="Icono de vestimenta"
+                            class="w-full h-full object-contain relative z-10 transform transition-transform duration-300 hover:scale-110 verde-filter"
+                        />
+                    </div>
+                </div>
+
+                <!-- Título principal -->
+                <h3
+                    class="text-[#9C7A2E] tracking-[0.3em] uppercase text-lg md:text-2xl mb-3 relative inline-block"
+                >
+                    Código de Vestimenta
+                </h3>
+
+                <!-- Línea decorativa -->
+                <div class="flex items-center justify-center gap-2 mb-6">
+                    <div
+                        class="w-12 h-px bg-gradient-to-r from-transparent to-[#0F3D2E]/30"
+                    >
+                    </div>
+                    <div class="w-2 h-2 rounded-full bg-[#0F3D2E]/40"></div>
+                    <div
+                        class="w-12 h-px bg-gradient-to-l from-transparent to-[#0F3D2E]/30"
+                    >
+                    </div>
+                </div>
+
+                <!-- FORMAL destacado -->
+                <div
+                    class="rounded-2xl py-4 px-6 mb-6 border border-[#0F3D2E]/10"
+                >
+                    <h4
+                        class="text-[#0F3D2E] tracking-[0.25em] uppercase text-lg md:text-2xl"
+                    >
+                        Formal
+                    </h4>
+                </div>
+
+                <!-- Texto descriptivo -->
+                <p
+                    class="font-charm text-[#0F3D2E] text-lg md:text-2xl lg:text-3xl leading-relaxed mb-8"
+                >
+                    Queremos que disfrutes de esta celebración de gala
+                </p>
+
+                <!-- ══════════════════════════════════════════ -->
+                <!-- 🎨 PALETA DE COLORES DE LA BODA            -->
+                <!-- ══════════════════════════════════════════ -->
+
+                <!-- Línea separadora -->
+                <div class="flex items-center justify-center gap-3 mb-6">
+                    <div
+                        class="w-16 h-[1px] bg-gradient-to-r from-transparent to-[#9C7A2E]/40"
+                    >
+                    </div>
+                    <div class="w-1.5 h-1.5 rounded-full bg-[#9C7A2E]/50"></div>
+                    <div
+                        class="w-16 h-[1px] bg-gradient-to-l from-transparent to-[#9C7A2E]/40"
+                    >
+                    </div>
+                </div>
+
+                <p
+                    class="text-[#9C7A2E] tracking-[0.2em] uppercase text-sm md:text-base mb-5"
+                >
+                    Paleta de Colores
+                </p>
+
+                <!-- Colores en círculos -->
+                <div class="flex flex-wrap justify-center gap-4 md:gap-6 mb-4">
+                    <!-- Emerald Green oscuro -->
+                    <div class="flex flex-col items-center gap-2 color-chip">
+                        <div
+                            class="w-12 h-12 md:w-14 md:h-14 rounded-full shadow-md border-2 border-white/60"
+                            style="background: radial-gradient(circle at 35% 35%, #2d7a4f, #1a5c37);"
+                        >
+                        </div>
+                        <span
+                            class="font-charm text-[#0F3D2E] text-xs md:text-sm text-center leading-tight"
+                            >Emerald<br />Green</span
+                        >
+                    </div>
+
+                    <!-- Green (dorado) -->
+                    <div class="flex flex-col items-center gap-2 color-chip">
+                        <div
+                            class="w-12 h-12 md:w-14 md:h-14 rounded-full shadow-md border-2 border-white/60"
+                            style="background: radial-gradient(circle at 35% 35%, #C9A84C, #9C7A2E);"
+                        >
+                        </div>
+                        <span
+                            class="font-charm text-[#0F3D2E] text-xs md:text-sm text-center leading-tight"
+                            >Golden<br />Green</span
+                        >
+                    </div>
+
+                    <!-- Sage Green -->
+                    <div class="flex flex-col items-center gap-2 color-chip">
+                        <div
+                            class="w-12 h-12 md:w-14 md:h-14 rounded-full shadow-md border-2 border-white/60"
+                            style="background: radial-gradient(circle at 35% 35%, #7a9e8a, #5c8070);"
+                        >
+                        </div>
+                        <span
+                            class="font-charm text-[#0F3D2E] text-xs md:text-sm text-center leading-tight"
+                            >Sage<br />Green</span
+                        >
+                    </div>
+
+                    <!-- Golden Ocre -->
+                    <div class="flex flex-col items-center gap-2 color-chip">
+                        <div
+                            class="w-12 h-12 md:w-14 md:h-14 rounded-full shadow-md border-2 border-white/60"
+                            style="background: radial-gradient(circle at 35% 35%, #e8d5a3, #c9b47a);"
+                        >
+                        </div>
+                        <span
+                            class="font-charm text-[#0F3D2E] text-xs md:text-sm text-center leading-tight"
+                            >Golden<br />Ocre</span
+                        >
+                    </div>
+
+                    <!-- Pearl White -->
+                    <div class="flex flex-col items-center gap-2 color-chip">
+                        <div
+                            class="w-12 h-12 md:w-14 md:h-14 rounded-full shadow-md border-2 border-[#e0d8c8]/80"
+                            style="background: radial-gradient(circle at 35% 35%, #f5f0e8, #ede6d6);"
+                        >
+                        </div>
+                        <span
+                            class="font-charm text-[#0F3D2E] text-xs md:text-sm text-center leading-tight"
+                            >Pearl<br />White</span
+                        >
+                    </div>
+                </div>
+
+                <!-- Nota colores no permitidos -->
+                <div
+                    class="mt-5 rounded-xl py-3 px-4 border border-[#9C7A2E]/20 bg-[#9C7A2E]/5"
+                >
+                    <p
+                        class="font-charm text-[#0F3D2E] text-sm md:text-base leading-relaxed"
+                    >
+                        ✨ Por favor evitar el color <span class="font-bold"
+                            >blanco puro</span
+                        > y <span class="font-bold">negro</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hoja dorada izquierda -->
+    <img
+        src="/imagenes/hojadorada.png"
+        alt="hoja dorada"
+        class="absolute left-0 top-8 md:top-24 w-18 h-18 md:w-28 md:h-28 opacity-0 pointer-events-none z-20"
+        id="hoja-vestimenta-left"
+    />
+
+    <!-- Hoja dorada derecha -->
+    <img
+        src="/imagenes/hojadorada.png"
+        alt="hoja dorada"
+        class="absolute right-0 top-8 md:top-24 w-18 h-18 md:w-28 md:h-28 opacity-0 pointer-events-none z-20 scale-x-[-1]"
+        id="hoja-vestimenta-right"
+    />
+
+    <!-- Flor lateral izquierda -->
+    <img
+        src="/imagenes/florlateral.png"
+        alt="hojas"
+        class="absolute left-0 top-12 md:top-24 w-18 h-18 md:w-28 md:h-28 opacity-0 pointer-events-none z-30"
+        id="flor-vestimenta-left"
+    />
+
+    <!-- Flor lateral derecha -->
+    <img
+        src="/imagenes/florlateral.png"
+        alt="hojas"
+        class="absolute right-0 top-12 md:top-24 w-18 h-18 md:w-28 md:h-28 opacity-0 pointer-events-none z-30 scale-x-[-1]"
+        id="flor-vestimenta-right"
+    />
+</section>
+
+<style>
+    .particula-dorada {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        background: radial-gradient(circle, #9c7a2e 0%, transparent 70%);
+        border-radius: 50%;
+        animation: flotar 6s ease-in-out infinite;
+        opacity: 0.4;
+    }
+
+    @keyframes flotar {
+        0%,
+        100% {
+            transform: translateY(0) translateX(0);
+            opacity: 0.2;
+        }
+        50% {
+            transform: translateY(-30px) translateX(15px);
+            opacity: 0.6;
+        }
+    }
+
+    @keyframes pulse-slow {
+        0%,
+        100% {
+            opacity: 0.4;
+            transform: scale(1);
+        }
+        50% {
+            opacity: 0.6;
+            transform: scale(1.05);
+        }
+    }
+
+    .animate-pulse-slow {
+        animation: pulse-slow 4s ease-in-out infinite;
+    }
+
+    .vestimenta-icon-container:hover svg {
+        animation: bounce-gentle 0.6s ease;
+    }
+
+    @keyframes bounce-gentle {
+        0%,
+        100% {
+            transform: translateY(0) scale(1);
+        }
+        50% {
+            transform: translateY(-8px) scale(1.05);
+        }
+    }
+
+    .verde-filter {
+        filter: brightness(0) saturate(100%) invert(18%) sepia(42%)
+            saturate(525%) hue-rotate(115deg) brightness(78%) contrast(105%);
+    }
+
+    /* Hover en chips de color */
+    .color-chip {
+        transition: transform 0.3s ease;
+    }
+    .color-chip:hover {
+        transform: translateY(-4px) scale(1.08);
+    }
+    .color-chip div {
+        transition: box-shadow 0.3s ease;
+    }
+    .color-chip:hover div {
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+</style>
+
+<script>
+    import { gsap } from "gsap";
+    import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    const initVestimenta = () => {
+        // ═══ ESTADO INICIAL ═══
+        gsap.set("#contenedor-vestimenta", { opacity: 0, y: 50, scale: 0.95 });
+
+        gsap.set("#flor-vestimenta-left", {
+            opacity: 0,
+            x: -40,
+            rotation: -8,
+            scale: 0.9,
+        });
+        gsap.set("#flor-vestimenta-right", {
+            opacity: 0,
+            x: 40,
+            rotation: 8,
+            scaleX: -0.9,
+            scaleY: 0.9,
+        });
+
+        gsap.set("#hoja-vestimenta-left", {
+            opacity: 0,
+            scale: 0,
+            rotation: -6,
+            transformOrigin: "bottom center",
+        });
+        gsap.set("#hoja-vestimenta-right", {
+            opacity: 0,
+            scaleX: 0,
+            scaleY: 0,
+            rotation: 6,
+            transformOrigin: "bottom center",
+        });
+
+        gsap.set("#tarjeta-vestimenta", { opacity: 0, y: 20 });
+        gsap.set(".color-chip", { opacity: 0, y: 20, scale: 0.8 });
+
+        // ═══ ANIMACIÓN PRINCIPAL ═══
+        ScrollTrigger.create({
+            trigger: "#contenedor-vestimenta",
+            start: "top 75%",
+            end: "top 20%",
+
+            onEnter: () => {
+                const tl = gsap.timeline();
+
+                tl.to(
+                    "#contenedor-vestimenta",
+                    {
+                        opacity: 1,
+                        y: 0,
+                        scale: 1,
+                        duration: 1.6,
+                        ease: "power3.out",
+                    },
+                    0,
+                )
+                    .to(
+                        "#flor-vestimenta-left",
+                        {
+                            opacity: 0.75,
+                            x: 0,
+                            rotation: -3,
+                            scale: 1,
+                            duration: 2.8,
+                            ease: "sine.out",
+                        },
+                        0,
+                    )
+                    .to(
+                        "#flor-vestimenta-right",
+                        {
+                            opacity: 0.75,
+                            x: 0,
+                            rotation: 3,
+                            scaleX: -1,
+                            scaleY: 1,
+                            duration: 2.8,
+                            ease: "sine.out",
+                        },
+                        0.05,
+                    )
+                    .to(
+                        "#hoja-vestimenta-left",
+                        {
+                            opacity: 0.7,
+                            scale: 0.9,
+                            rotation: -3,
+                            duration: 2.2,
+                            ease: "sine.out",
+                        },
+                        0.1,
+                    )
+                    .to(
+                        "#hoja-vestimenta-right",
+                        {
+                            opacity: 0.7,
+                            scaleX: -0.9,
+                            scaleY: 0.9,
+                            rotation: 3,
+                            duration: 2.2,
+                            ease: "sine.out",
+                        },
+                        0.15,
+                    )
+                    .to(
+                        "#tarjeta-vestimenta",
+                        {
+                            opacity: 1,
+                            y: 0,
+                            duration: 1,
+                            ease: "power2.out",
+                        },
+                        0.8,
+                    )
+                    // Chips de color aparecen en cascada
+                    .to(
+                        ".color-chip",
+                        {
+                            opacity: 1,
+                            y: 0,
+                            scale: 1,
+                            duration: 0.5,
+                            ease: "back.out(1.7)",
+                            stagger: 0.1,
+                        },
+                        1.2,
+                    );
+
+                // Movimientos continuos flores y hojas
+                gsap.to("#flor-vestimenta-left", {
+                    y: -15,
+                    x: -8,
+                    rotation: -12,
+                    duration: 3,
+                    repeat: -1,
+                    yoyo: true,
+                    ease: "sine.inOut",
+                    delay: 3,
+                });
+                gsap.to("#flor-vestimenta-right", {
+                    y: -12,
+                    x: 8,
+                    rotation: 12,
+                    duration: 3.3,
+                    repeat: -1,
+                    yoyo: true,
+                    ease: "sine.inOut",
+                    delay: 3.2,
+                });
+                gsap.to("#hoja-vestimenta-left", {
+                    y: -18,
+                    rotation: -15,
+                    duration: 3.5,
+                    repeat: -1,
+                    yoyo: true,
+                    ease: "sine.inOut",
+                    delay: 3.3,
+                });
+                gsap.to("#hoja-vestimenta-right", {
+                    y: -16,
+                    rotation: 15,
+                    duration: 3.8,
+                    repeat: -1,
+                    yoyo: true,
+                    ease: "sine.inOut",
+                    delay: 3.5,
+                });
+                gsap.to("#hoja-vestimenta-left", {
+                    scale: 0.8,
+                    duration: 4,
+                    repeat: -1,
+                    yoyo: true,
+                    ease: "sine.inOut",
+                    delay: 4,
+                });
+                gsap.to("#hoja-vestimenta-right", {
+                    scaleX: -0.8,
+                    scaleY: 0.8,
+                    duration: 4.5,
+                    repeat: -1,
+                    yoyo: true,
+                    ease: "sine.inOut",
+                    delay: 4.3,
+                });
+                gsap.to("#flor-vestimenta-left", {
+                    x: -12,
+                    duration: 5,
+                    repeat: -1,
+                    yoyo: true,
+                    ease: "sine.inOut",
+                    delay: 4.5,
+                });
+                gsap.to("#flor-vestimenta-right", {
+                    x: 12,
+                    duration: 5.5,
+                    repeat: -1,
+                    yoyo: true,
+                    ease: "sine.inOut",
+                    delay: 4.8,
+                });
+            },
+
+            onLeaveBack: () => {
+                gsap.killTweensOf("#flor-vestimenta-left");
+                gsap.killTweensOf("#flor-vestimenta-right");
+                gsap.killTweensOf("#hoja-vestimenta-left");
+                gsap.killTweensOf("#hoja-vestimenta-right");
+
+                const tl = gsap.timeline();
+
+                tl.to("#tarjeta-vestimenta", {
+                    opacity: 0,
+                    y: 20,
+                    duration: 0.3,
+                    ease: "power2.in",
+                })
+                    .to(
+                        "#contenedor-vestimenta",
+                        {
+                            opacity: 0,
+                            y: 50,
+                            scale: 0.95,
+                            duration: 0.5,
+                            ease: "power2.in",
+                        },
+                        "<",
+                    )
+                    .to(
+                        "#flor-vestimenta-left",
+                        { opacity: 0, x: -40, duration: 1, ease: "sine.in" },
+                        "<",
+                    )
+                    .to(
+                        "#flor-vestimenta-right",
+                        { opacity: 0, x: 40, duration: 1, ease: "sine.in" },
+                        "<",
+                    )
+                    .to(
+                        "#hoja-vestimenta-left, #hoja-vestimenta-right",
+                        {
+                            opacity: 0,
+                            scale: 0,
+                            duration: 0.8,
+                            ease: "sine.in",
+                        },
+                        "<",
+                    )
+                    .to(
+                        ".color-chip",
+                        { opacity: 0, y: 20, scale: 0.8, duration: 0.3 },
+                        "<",
+                    )
+                    .set("#flor-vestimenta-left", {
+                        rotation: -8,
+                        scale: 0.9,
+                        x: -40,
+                        y: 0,
+                    })
+                    .set("#flor-vestimenta-right", {
+                        rotation: 8,
+                        scaleX: -0.9,
+                        scaleY: 0.9,
+                        x: 40,
+                        y: 0,
+                    })
+                    .set("#hoja-vestimenta-left", {
+                        rotation: -6,
+                        scale: 0,
+                        y: 0,
+                    })
+                    .set("#hoja-vestimenta-right", {
+                        scaleX: 0,
+                        scaleY: 0,
+                        rotation: 6,
+                        y: 0,
+                    });
+            },
+        });
+    };
+
+    document.addEventListener("DOMContentLoaded", initVestimenta);
+    document.addEventListener("astro:page-load", initVestimenta);
+</script>
